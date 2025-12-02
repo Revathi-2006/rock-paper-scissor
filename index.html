@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+    <nav class="menu">
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul id="menu-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="how-to-play">How to Play</a></li>
+        <li><a href="#" id="toggle-sound">Sound On</a></li>
+        <li><a href="#" id="profile">Profile</a></li>
+        <li><a href="#" id="resources-link">Resources & Credits</a></li>
+    </ul>
+</nav>
+
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+
+        <!-- Mode Selection -->
+        <div class="mode-select">
+            <button id="mode-pc">Player vs Computer</button>
+            <button id="mode-2p">Player1 vs Player2</button>
+        </div>
+
+        <!-- Choices -->
+        <div class="choices">
+            <button class="choice" data-choice="rock">✊ Rock</button>
+            <button class="choice" data-choice="paper">✋ Paper</button>
+            <button class="choice" data-choice="scissors">✌️ Scissors</button>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div>Player 1: <span id="score1">0</span></div>
+            <div>Player 2 / Computer: <span id="score2">0</span></div>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer">Time Left: <span id="time">60</span>s</div>
+
+        <!-- Result -->
+        <div class="result"></div>
+    </div>
+
+    <!-- Modals -->
+    <div id="instructions" class="instructions hidden">
+        <h2>How to Play</h2>
+        <p>1. Choose Rock, Paper, or Scissors.</p>
+        <p>2. If playing against computer, computer will randomly pick.</p>
+        <p>3. Player1 vs Player2: each player selects their choice.</p>
+        <p>4. Winner is decided based on game rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</p>
+        <p>5. Each game lasts 1 minute; the scoreboard shows total scores.</p>
+        <p>6. Enjoy the neon game and listen to sounds (click, win, lose, draw).</p>
+        <button id="close-instructions">Close</button>
+    </div>
+
+    <div id="profile-modal" class="instructions hidden">
+        <h2>Profile</h2>
+        <p>Name: <input type="text" id="player-name" placeholder="Enter your name"></p>
+        <p>Avatar: <select id="player-avatar">
+            <option>😎</option>
+            <option>🧑‍💻</option>
+            <option>👾</option>
+        </select></p>
+        <p>High Score: <span id="high-score">0</span></p>
+        <p>Total Games Played: <span id="games-played">0</span></p>
+        <button id="close-profile">Close</button>
+    </div>
+
+    <div id="resources-modal" class="instructions hidden">
+        <h2>Resources & Credits</h2>
+        <ul>
+            <li>IDE: <strong>VS Code</strong></li>
+            <li>AI Assistance: <strong>ChatGPT</strong></li>
+            <li>Graphics: <strong>Free Neon Assets</strong></li>
+            <li>Sounds: <strong>Sounds Folder</strong></li>
+            <li>Created By: <strong>Revathi</strong></li>
+        </ul>
+        <button id="close-resources">Close</button>
+    </div>
+
+    <!-- Canvas for Neon Splash -->
+    <canvas id="particles"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

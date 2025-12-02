@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body {
+    .menu {
+    position: relative;
+    background: rgba(0,0,0,0.8);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 15px;
+    color: #0ff;
+}
+
+/* Menu Items */
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 15px;
+    gap: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #0ff;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    text-shadow: 0 0 10px #0ff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+    .menu-toggle { display: block; }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .menu ul.active { display: flex; }
+}
+
+    background: #0f0f0f url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Menu */
+.menu { position: relative; background: rgba(0,0,0,0.8); }
+.menu-toggle { display: none; font-size: 2rem; cursor: pointer; padding: 15px; color: #0ff; }
+.menu ul { display: flex; list-style: none; justify-content: center; padding: 15px; gap: 30px; }
+.menu ul li a { text-decoration: none; color: #0ff; font-weight: bold; }
+.menu ul li a:hover { text-shadow: 0 0 10px #0ff; }
+
+/* Game Container */
+.game-container { text-align: center; padding: 50px 20px; }
+h1 { font-size: 3rem; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; margin-bottom: 30px; }
+
+.mode-select button, .choices button {
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #0ff;
+    cursor: pointer;
+    box-shadow: 0 0 5px #0ff;
+    transition: 0.3s;
+}
+.mode-select button:hover, .choices button:hover {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+}
+
+.scoreboard { margin: 20px 0; font-size: 1.5rem; }
+.timer { font-size: 1.2rem; margin-bottom: 20px; }
+.result { font-size: 2rem; margin-top: 20px; text-shadow: 0 0 10px #0ff; }
+
+/* Modals */
+.instructions {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    color: #0ff;
+    z-index: 1000;
+    text-align: left;
+}
+.instructions.hidden { display: none; }
+.instructions button { margin-top: 15px; padding: 10px 20px; border: none; background: #0ff; color: #000; cursor: pointer; font-weight: bold; border-radius: 8px; }
+
+/* Canvas */
+canvas { position: fixed; top:0; left:0; z-index: -1; }
+
+/* Responsive */
+@media (max-width: 768px){
+    .menu-toggle { display: block; }
+    .menu ul { display: none; flex-direction: column; text-align: center; }
+    .menu ul.active { display: flex; }
+    h1 { font-size: 2rem; }
+    .mode-select button, .choices button { font-size: 1rem; padding: 10px 15px; }
+    .scoreboard { font-size: 1.2rem; }
+}
